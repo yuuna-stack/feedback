@@ -29,7 +29,8 @@ export const FeedbackProvider = ({ children }) => {
   });
 
   const addFeedback = (newFeedback) => {
-    newFeedback.id = new uuidv4();
+    let val = uuidv4();
+    newFeedback.id = val;
     setFeedback([newFeedback, ...feedback]);
   };
 
